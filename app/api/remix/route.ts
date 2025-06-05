@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 
-// Handle POST request
 export async function POST(req: NextRequest) {
     try {
         const formData = await req.formData()
@@ -78,3 +77,4 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: 'Something went wrong' }, { status: 500 })
     }
 }
+
